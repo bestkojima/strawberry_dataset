@@ -21,7 +21,7 @@ for file in $all_files; do
 
     # 执行git add针对具体文件
     git add "$file"
-
+    echo "$file"
     # 当文件计数器达到100时，执行git commit和push
     if [ $((counter % 100)) -eq 0 ]; then
         git commit -m "Processed files up to number $counter"
